@@ -1,0 +1,245 @@
+@import "./_global";
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400&family=Lato:ital,wght@0,300;1,300&family=Lora:ital,wght@0,500;1,500&family=Montserrat:ital@0;1&family=Playfair+Display:ital,wght@0,600;1,500&family=Roboto:ital@0;1&display=swap");
+
+:root {
+  --dosis: "Dosis", sans-serif;
+  --lato: "Lato", sans-serif;
+  --lora: "Lora", serif;
+  --monster: "Montserrat", sans-serif;
+  --playfair: "Playfair Display", serif;
+  --roboto: "Roboto", sans-serif;
+}
+@mixin card() {
+  width: 100%;
+  padding: 3rem;
+  background-color: #fff;
+}
+@mixin btn($bgc) {
+  padding: 10px 25px;
+  background-color: $bgc;
+  color: #fff;
+  font-size: 1.2rem;
+  border: 0;
+  transition: all 0.5s linear;
+  border-radius: 30px;
+}
+
+@mixin title() {
+  text-align: center;
+  font-size: 2rem;
+  font-family: var(--playfair);
+}
+@mixin grid($gtc) {
+  display: grid;
+  grid-template-columns: $gtc;
+  gap: 3rem;
+  align-items: center;
+}
+h2 {
+  font-size: 1.3rem;
+  font-family: --lora;
+}
+p {
+  font-size: 1rem;
+  font-family: var(--lato);
+}
+.header {
+    position: relative;
+  width: 100%;
+  height: 90vh;
+  background-image: url(/images/banner2.jpg);
+  background-size: cover;
+  .navigation {
+    width: 95%;
+    height: 8vh;
+    margin: 0 auto;
+    .navbar {
+      height: 8vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .navbar__nav {
+        margin-top: 30px;
+        a {
+          color: #fff;
+          margin-left: 20px;
+          font-size: 1.2rem;
+          font-family: var(--playfair);
+        }
+      }
+    }
+  }
+  .banner {
+    margin-top: 10%;
+    width: 30%;
+    margin-left: 10%;
+    font-family: var(--lora);
+    h1 {
+      font-size: 3rem;
+
+      color: #000;
+
+      span {
+        color: rgb(246, 115, 67);
+      }
+    }
+    button {
+      @include btn(#2b2b2b);
+      margin-top: 1rem;
+
+      &:hover {
+        background-color: rgb(246, 115, 67);
+      }
+    }
+  }
+  .navbar__nav {
+    .fa-bars {
+      font-size: 1.5rem;
+      display: none;
+    }
+    .active {
+      background-color: rgb(56, 54, 54);
+      padding: 5px 15px;
+      color: white;
+    }
+    a {
+      margin-left: 15px;
+      color: black;
+      font-size: 1.3rem;
+      font-family: var(--lora);
+      padding: 5px 15px;
+      transition: all 0.2s linear;
+      &:hover {
+        background-color: rgb(56, 54, 54);
+        padding: 5px 15px;
+        color: white;
+      }
+    }
+  }
+  .img{
+    position: absolute;
+transform: translate(-50%, -50%);
+   left: 50%;
+   top: 100%;
+    img{
+        width: 80px;
+        position: relative; 
+
+    }
+  }
+
+}
+
+.our {
+  @include card();
+  padding: 4rem 0;
+  background-image: url(/images/plan_bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  .img__title{
+    img{
+        width: 60px;
+        margin: 0 auto;
+        margin-top: 10vh;
+        
+    }
+  }
+  h2 {
+    @include title();
+    
+  }
+}
+
+.our__content {
+  @include grid(repeat(3, 1fr));
+  text-align: center;
+  .our__item {
+    .img {
+      position: relative;
+      border: 25px solid white;
+    }
+    .title {
+        background-color: rgba(250, 191, 119, 0.898);
+        transition: all 0.5s linear;
+        &:hover h2{
+            color: #fff;
+        }
+      h2 {
+        font-size: 1.5rem;
+        align-items: center;
+      }
+      p{
+        color: #fff
+      }
+      button {
+        @include btn(#2b2b2b);
+        margin-top: 1rem;
+        border-radius: 25px;
+      }
+    }
+  }
+}
+
+.and{
+  @include card();
+  padding: 4rem 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  .img__title{
+    img{
+        width: 60px;
+        margin: 0 auto;
+        margin-top: 10vh;
+        
+    }
+  }
+  h2{
+    @include title();
+  }
+}
+
+.and__content{
+    @include grid(repeat(3, 1fr));
+  text-align: center;
+  margin-top: -20vh;
+  .img1{
+    margin-top: 50vh;
+  }
+  
+}
+.img2{
+    img{
+        width: 100px;
+        margin: 0 auto;
+        margin-top: 10vh;
+    }
+  }
+
+  .about{
+    @include card();
+    background-image: url(/images/about_bg.jpg);
+    background-repeat: no-repeat;
+
+  }
+
+  .about__content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    .about__item{
+        h2{
+            font-size: 3rem;
+        }
+        button{
+            @include btn(#2b2b2b);
+            margin-top: 1.2rem;
+            &:hover{
+                background-color: rgb(229, 14, 68);
+            }
+        }
+
+    }
+  }
