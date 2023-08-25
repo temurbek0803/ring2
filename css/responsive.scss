@@ -1,0 +1,86 @@
+@media only screen and(max-width:768px){
+      .header {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      .header .navigation .navbar .navbar__nav a{
+        display: none;
+      }
+      .header .banner h1{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+      }
+      .header .banner p{
+        width: 400px;
+      }
+      .header .banner button{
+        width: 30vh;
+        height: 8vh;
+        margin-bottom: 100px;
+      }
+.our{
+    .our__content{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+.and__content{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.and__content{
+  margin-top: 10vh;
+  .img1{
+    margin-top: 0vh;
+  }
+  
+}
+.about__content{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.blog__content{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.grooms__content .grooms__item .img img {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .grooms__content .grooms__item p{
+    margin-bottom: 20px;
+
+  }
+  .visit .visit__item{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 80%;
+  }
+  .contact__content{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .contact__content .contact__item form{
+    align-items: center;
+  }
+  .contact__content .contact__item form h2{
+    margin-top: 60px;
+  }
+  .contact__content .contact__item form input{
+    width: 70%;
+  }
+  .contact__content .contact__item form textarea{
+    width: 70%;
+  }
+  .contact__content .contact__item iframe{
+    width: 100%;
+  }
+  .contact__content .contact__item .social{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
